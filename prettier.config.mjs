@@ -1,5 +1,5 @@
-module.exports = {
-  plugins: [require('prettier-plugin-tailwindcss')],
+export default {
+  plugins: ['prettier-plugin-tailwindcss'],
   tailwindConfig: './tailwind.config.ts',
   singleQuote: true,
   semi: false,

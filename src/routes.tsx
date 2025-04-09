@@ -8,21 +8,18 @@ import { AuthLayout } from './pages/_layouts/auth'
 import { SignIn } from './pages/auth/sign-in'
 import { SignUp } from './pages/auth/sign-up'
 
-
 export const router = createBrowserRouter([
-
   {
     path: '/',
-    element:<AppLayout />,
-    children: [{ path: '/', element: <Dashboard /> },]
+    element: <AppLayout />,
+    children: [{ path: '/', element: <Dashboard /> }],
   },
   {
     path: '/',
-    element:<AuthLayout />,
+    element: <AuthLayout />,
     children: [
       { path: '/sign-in', element: <SignIn /> },
-      { path: '/sign-up', element: <SignUp /> }
-
-    ]
-  }
+      { path: '/sign-up', element: <SignUp /> },
+    ],
+  },
 ])
