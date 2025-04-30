@@ -26,10 +26,9 @@ export function SignUp() {
     formState: { isSubmitting },
   } = useForm<SignUpForm>()
 
-  async function handleSignUp(data: SignUpForm) {
+  async function handleSignUp({ email }: SignUpForm) {
+    console.log(email)
     try {
-      console.log(data)
-
       await new Promise((resolve) => setTimeout(resolve, 2000))
 
       toast.success('Restaurante cadastrado com sucesso.', {
@@ -39,7 +38,7 @@ export function SignUp() {
         },
       })
     } catch {
-      toast.error('Error ao cadastrar restaurante.')
+      toast.error('Erro ao cadastrar restaurante.')
     }
   }
 
